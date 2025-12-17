@@ -1,16 +1,39 @@
-# creative_movie
+# Creative Movie App
 
-A new Flutter project.
+A Flutter application that displays popular movies using the TMDB API,
+with infinite scrolling and detailed movie views.
 
-## Getting Started
+## Features
+- Popular movies list
+- Infinite scroll pagination
+- Movie detail screen
+- Error handling with retry
+- Pull to refresh
+- Cached images
 
-This project is a starting point for a Flutter application.
+## Tech Stack
+- Flutter
+- Provider
+- HTTP
+- TMDB API
 
-A few resources to get you started if this is your first Flutter project:
+## Architecture
+- UI → Controller → Repository
+- Provider for state management
+- Clean separation of concerns
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to Run
+1. Clone the repo
+2. Create a `.env` file
+3. Add TMDB API key
+4. Run `flutter pub get`
+5. Run the app
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Known Issues
+- On some Android devices, TMDB detail endpoint may intermittently fail
+  with a SocketException (errno 104). This is handled gracefully with retry UI.
+
+## Screens
+- Home (Popular Movies)
+- Movie Detail
+
