@@ -27,7 +27,7 @@ class _SearchScreenState extends State<SearchScreen> {
           decoration: const InputDecoration(
             hintText: 'Search movies...',
             hintStyle: TextStyle(color: Colors.white54),
-            border: InputBorder.none,
+            // border: InputBorder.none,
           ),
           onChanged: controllerWatch.onQueryChanged,
         ),
