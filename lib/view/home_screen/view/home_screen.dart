@@ -64,6 +64,14 @@ class _HomeScreenState extends State<HomeScreen> {
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.search),
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.search);
+            },
+          ),
+        ],
       ),
       body: Consumer<PopularMoviesController>(
         builder: (context, controller, _) {
